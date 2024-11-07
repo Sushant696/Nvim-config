@@ -12,13 +12,16 @@ return {
         visible = true,
         show_hidden_count = true,
         hide_dotfiles = false,
-        hide_gitignored = true,
+        hide_gitignored = false,
         hide_by_name = {
-          -- '.git',
-          -- '.DS_Store',
-          -- 'thumbs.db',
+          '.git',
+          '.DS_Store',
+          'thumbs.db',
         },
         never_show = {},
+      },
+      always_show_by_pattern = { -- uses glob style patterns
+        --".env*",
       },
     }
   },
