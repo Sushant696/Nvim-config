@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "html", "cssls", "emmet_ls", "jdtls" }, -- Added 'jdtls'
+        ensure_installed = { "lua_ls", "ts_ls", "html", "cssls", "emmet_ls", "jdtls", "solidity" }, -- Added 'jdtls'
       })
 
       -- Automatically handle server setup with mason-lspconfig
@@ -53,6 +53,10 @@ return {
 
       -- Set up CSS LSP
       lspconfig.cssls.setup({
+        capabilities = capabilities,
+      })
+      -- Set up Solidity LSP
+      lspconfig.solidity.setup({
         capabilities = capabilities,
       })
 
