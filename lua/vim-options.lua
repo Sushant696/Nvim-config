@@ -15,6 +15,12 @@ vim.g.background = "light"
 
 vim.opt.swapfile = false
 
+
+vim.opt.nu = true; 
+vim.opt.relativenumber = true ;
+vim.opt.smartindent = true;
+vim.opt.cursorline = true;
+
 -- Navigate vim panes better
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')

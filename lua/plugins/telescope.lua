@@ -4,7 +4,6 @@ local config = function()
   local telescope = require("telescope")
   telescope.setup({
     defaults = {
-      -- Enable hidden file visibility globally
       find_command = { "rg", "--ignore", "--hidden", "--files", "--glob", ".env" },
       mappings = {
         i = {
@@ -15,7 +14,6 @@ local config = function()
     },
   })
 end
-
 
 
 return {
@@ -29,6 +27,8 @@ return {
     mapvimkey("<leader>fi", "Telescope help_tags", "Show Help Tags"),
     mapvimkey("<leader>ff", "Telescope find_files", "Find Files"),
     mapvimkey("<leader>fj", "Telescope live_grep", "Live Grep"),
+    mapvimkey("<leader>t", "Telescope colorscheme", "Live Grep"),
+
     mapvimkey("<leader>fb", "Telescope buffers", "Find Buffers"),
     vim.api.nvim_set_keymap(
       "n",

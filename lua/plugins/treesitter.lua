@@ -8,6 +8,11 @@ return {
         auto_install = true,
         highlight = { enable = true },
         indent = { enable = true },
+        pickers = {
+          colorscheme = {
+            enable_preview = true,
+          }
+        }
       })
     end
   }
